@@ -1,0 +1,26 @@
+{
+  "name": "fridge-storage",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Fridge",
+    "products",
+    "list",
+    "fastify",
+    "sqlite"
+  ],
+  "author": "Akama Aka <akama.aka@akami-solutions.cc>",
+  "license": "GNU GPLv3",
+  "description": "A Webserver where you can see what you've currently stored in the fridge",
+  "dependencies": {
+    "@fastify/compress": "^7.0.3",
+    "@punkish/fastify-better-sqlite3": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
