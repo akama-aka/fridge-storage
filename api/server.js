@@ -37,7 +37,15 @@ function loadRoute(routeOptions) {
 
 fastify.addHook('onRequest', (request, reply, done) => {
     reply.header('Access-Control-Allow-Origin', '*');
-    reply.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    reply.header('Access-Control-Allow-Headers', 'Content-Type');
+    reply.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
+    reply.header('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With');
     done();
+});
+
+fastify.route({
+    method: 'OPTIONS',
+    url: '*',
+    handler: async (req, res) => {
+        res.send('ok');
+    }
 });
