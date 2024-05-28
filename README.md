@@ -1,53 +1,59 @@
 # Fridge Storage
 
-`Fridge Storage` ist eine Webseite und eine API programmiert in JavaScript das dabei Helfen soll im Auge zu behalten was
-man derzeit im Gefrierschrank oder im Eiskasten noch hat. Der ursprung für die Idee war diese das wir in der Familie gerne 
-mal sachen in den Eiskasten im Keller gegeben hatten bis dann alles voll war und wir nicht wissen was wir noch im Keller
-haben und was nicht. Und da wir bei uns oben auch ein Eiskasten noch haben was einiges näher dran ist kommt man da auch
-durcheinander. Somit habe ich diese Webseite mit der API mal schnell innerhalb von 2-3 Tagen Programmiert.
+`Fridge Storage` is a website and an API, developed in JavaScript, designed to help keep track of what's in your freezer or fridge. The seed for this project was sown by the need to keep a tab on the items stored in various cooling devices in our household.
 
-Leider werde ich das Projekt noch so sehr Warten da es keiner in meiner Familie benutzt und es mal wieder ein Projekt ist,
-was ich umsonst gemacht habe. 
+Please note that I might not actively maintain this project in the future as it didn't gain substantial use in my family.
 
-## Drittanbieter Pakete
+## Usage
 
-ja dieses Projekt verwendet Pakete dritter quellen. Diese sind folgende
+### Starting the API Server
+1. Download the source code.
+2. Unpack the source code.
+3. Specify the hostname and port of the API server and the path to SQLite database in the .env file.
+4. Navigate to the api folder and run `npm ci`.
+5. Start the server by typing `node server.js` into the terminal.
 
-| Package           | Link                                        | License      | Grund                                               | Version  |
-|-------------------|---------------------------------------------|--------------|-----------------------------------------------------|----------|
-| dotenv            | https://npmjs.org/package/dotenv            | BSD-2-Clause | Sichere implementation von .env Variablen           | 16.04.05 |
-| fastify           | https://npmjs.org/package/fastify           | MIT          | Einfaches-, Schnelles und Optimiertes API Framework | 04.27.00 |
-| sqlite            | https://npmjs.org/package/sqlite            | MIT          | Library zur Implementation von SQLite Datenbanken   | 05.01.01 |
-| sqlite3           | https://npmjs.org/package/sqlite3           | BSD-3-Clause | -_-                                                 | 05.01.07 |
-| @fastify/compress | https://npmjs.org/package/@fastify/compress | MIT          | Wird ggf. entfernt                                  | 07.00.03 |
-| Bootstrap         | https://npmjs.org/package/bootstrap         | MIT          | Frontend styling für die Webseite                   | 5        |
+### Accessing the Website
+1. Install a web server of your choice (e.g., NGINX, Apache).
+2. Move the files from the `web` folder into the root directory of your web server.
+3. Start the web server and access the website.
 
-## Hardware und Mikrokontroller Support
+>Detailed usage instructions are in the pipeline.
 
-| Hardware          | Supported            |
-|-------------------|----------------------|
-| Raspberry Pi Pico | :x:                  |           
-| Raspberry Pi 3    | ❔                    |
-| Raspberry Pi 4    | ✅                    |
-| Raspberry Pi 5    | ✅                    |
-| Min Disk Space    | 700 MB               |
-| Third Party Apps  | nodejs,npm,WebServer |
-## Sicherheitsupdates & Feature Updates
+## Third Party Packages
+
+This project uses third-party packages in addition to the original code. These are listed in the following table:
+
+| Package           | Link                                        | License      | Purpose                                            | Version  |
+|-------------------|---------------------------------------------|--------------|----------------------------------------------------|----------|
+| dotenv            | https://npmjs.org/package/dotenv            | BSD-2-Clause | Securing environment variables                     | 16.04.05 |
+| fastify           | https://npmjs.org/package/fastify           | MIT          | API framework                                      | 04.27.00 |
+| sqlite            | https://npmjs.org/package/sqlite            | MIT          | SQLite database implementation                     | 05.01.01 |
+| sqlite3           | https://npmjs.org/package/sqlite3           | BSD-3-Clause | -_-                                                | 05.01.07 |
+| @fastify/compress | https://npmjs.org/package/@fastify/compress | MIT          | May be removed in the future                       | 07.00.03 |
+| Bootstrap         | https://npmjs.org/package/bootstrap         | MIT          | Frontend design for the website                    | 5        |
+
+## Hardware and Microcontroller Support
+
+| Hardware              | Supported |
+|-----------------------|-----------|
+| Raspberry Pi Pico     | :x:       |           
+| Raspberry Pi 3        | ❔         |
+| Raspberry Pi 4        | ✅         |
+| Raspberry Pi 5        | ✅         |
+| Minimum Disk Space    | 700 MB    |
+| Third Party Apps      | nodejs,npm,WebServer |
+
+## Security and Feature Updates
 
 ### Feature Updates
 
-Feature Update und minor Bug fixes werden immer am 15. Tag des Monats veröffentlicht.
+Feature updates and minor bug fixes are always released on the 15th day of the month. Feature updates are planned until 28th May 2025.
 
-Feature Updates sind bis zum 28.05.2025 vorgesehen.
+### Security Updates
 
-### Sicherheitsupdates
-
-Sicherheitsupdates werden je nachdem, wie ernst die lage ist so Schnell wie möglich behoben und veröffentlicht.
-
-Sicherheitsupdates sind bis zum 1.1.2026 vorgesehen. Updates können sich allerdings Verspäten.
+Security updates are released as quickly as possible depending on the urgency. Security updates are planned until 1st January 2026, but they may get delayed.
 
 ### Licensing
 
-Beim Download, Nutzen, Bearbeiten und Forken wird Automatisch die Lizenzen des Projektes als auch die Lizenzen die das Projekt verwendet Rechts geltend gemacht.
-
-Die Lizenz bedingungen finden Sie in der LICENSE Datei.
+By downloading, using, editing, and forking the project, you automatically accept the licensing terms detailed in the LICENSE file and those of the packages used by this project.
