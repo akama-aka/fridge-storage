@@ -21,7 +21,7 @@ module.exports =[
                             id: product.product_id,
                             barcode: product.product_barcode,
                             name: product.product_name,
-                            image: product.product_image.toString('utf-8') || null
+                            image: product.product_image.toString() || null
                         }
                     })
                 });
@@ -42,7 +42,10 @@ module.exports =[
         url: '/api/products',
         handler: async (req, res) => {
             let product = req.body;
-            await db.addProduct(product.barcode, product.name, product.image)
+            await db.addProduct(product.barcode, product.name, product.image).then((response) => {
+                // Add the product to storage too
+                db.addStorage(response.lastID, 0);
+            });
             res.send('Product added');
         }
     },
@@ -98,7 +101,7 @@ module.exports =[
         },
         url: '/api/storage',
         handler: async (req, res) => {
-            let storage = req.body;
+            let storage = await req.body;
             await db.addStorage(storage.product_id, storage.quantity)
             res.send('Storage added');
         }
@@ -115,7 +118,7 @@ module.exports =[
         },
         url: '/api/storage',
         handler: async (req, res) => {
-            let storage = req.body;
+            let storage = await req.body;
             await db.updateStorage(storage.product_id, storage.quantity)
             res.send('Storage updated');
         }
