@@ -11,8 +11,8 @@ name: Publish Docker Web image
 env:
   IMAGE_NAME: ${{ github.repository }}-web
 on:
-  release:
-    types: [published]
+  push:
+    branches: ["development"]
 
 jobs:
   push_to_registry:

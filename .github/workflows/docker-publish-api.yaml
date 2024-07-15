@@ -11,8 +11,8 @@ name: Publish Docker API image
 env:
   IMAGE_NAME: ${{ github.repository }}-api
 on:
-  release:
-    types: [published]
+  push:
+    branches: ["development"]
 
 jobs:
   push_to_registry:
