@@ -1,0 +1,27 @@
+# TODO: Fix the "Error response from daemon: network backend not found" Error
+services:
+  frontend:
+    image: ghcr.io/akama-aka/fridge-storage-web:development
+    environment:
+      SERVER_PORT: 80
+    ports:
+      - 80:80
+    networks:
+      - frontend
+      - backend
+  backend:
+    image: ghcr.io/akama-aka/fridge-storage-api:development
+    environment:
+      SERVER_PORT: 81
+    networks:
+      - backend
+
+networks:
+  frontend:
+    name: frontend
+    driver: bridge
+  backend:
+    name: backend
+    driver: none
+    external: true
+    attachable: true
