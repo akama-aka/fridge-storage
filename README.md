@@ -35,14 +35,14 @@ This project uses third-party packages in addition to the original code. These a
 
 ## Hardware and Microcontroller Support
 
-| Hardware              | Supported |
-|-----------------------|-----------|
-| Raspberry Pi Pico     | :x:       |           
-| Raspberry Pi 3        | ❔         |
-| Raspberry Pi 4        | ✅         |
-| Raspberry Pi 5        | ✅         |
-| Minimum Disk Space    | 700 MB    |
-| Third Party Apps      | nodejs,npm,WebServer |
+| Hardware              | Supported  |
+|-----------------------|------------|
+| Raspberry Pi Pico     | :x:        |           
+| Raspberry Pi 3        | ❔          |
+| Raspberry Pi 4        | ✅          |
+| Raspberry Pi 5        | ✅          |
+| Minimum Disk Space    | 700 MB     |
+| Third Party Apps      | nodejs,npm |
 
 ## Security and Feature Updates
 
