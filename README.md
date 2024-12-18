@@ -46,13 +46,7 @@ This project uses third-party packages in addition to the original code. These a
 
 ## Security and Feature Updates
 
-### Feature Updates
-
-Feature updates and minor bug fixes are always released on the 15th day of the month. Feature updates are planned until 28th May 2025.
-
-### Security Updates
-
-Security updates are released as quickly as possible depending on the urgency. Security updates are planned until 1st January 2026, but they may get delayed.
+Well lost motivation and this so no updates.
 
 ### Licensing
 
